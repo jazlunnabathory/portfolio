@@ -1,0 +1,425 @@
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: #fff;
+}
+
+a {
+  color: #03FA6E;
+}
+
+/*---HEADER---*/
+
+.header {
+  background-color: #000;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  margin-top: 0px;
+  width: 100%;
+  z-index: 3;
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #ffffff;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+  background-color: #03FA6E;
+  color: #000;
+}
+
+.active {
+  background-color: #03FA6E;
+  color: #000;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+.logo {
+  height: 60px;
+  width: 225px;
+}
+
+/*---MENU---*/
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+
+
+/*---THREE LINES MENU---*/
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #03FA6E;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #03FA6E;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+
+
+/*---THREE LINES DROPDOWN MENU*/
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+} 
+
+  /* 48em = 768px */
+
+  @media (min-width: 48em) {
+      .header li {
+        float: left;
+      }
+      .header li a {
+        padding: 20px 30px;
+      }
+      .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+      }
+      .header .menu-icon {
+        display: none;
+      }
+    }
+
+
+.work {
+  float: center;
+  margin-top: 100px;
+  padding-left: 500px;
+  padding-right: 100px;
+  margin-bottom: 50px;
+  text-align: justify;
+  font-size: 1.25em;
+}
+
+/*FORMULARIO*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+/* Get rid of all default margins/paddings. Set typeface */
+
+/* body {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+background-color: white;
+font-family: "lato", sans-serif;
+} */
+
+.signupFrm {
+display: flex;
+justify-content: left;
+align-items: center;
+height: 75vh;
+}
+
+.form {
+background-color: white;
+width: 500px;
+border-radius: 8px;
+padding: 20px 40px;
+/* box-shadow: 0 10px 25px rgba(92, 99, 105, .2); */
+margin-top: 350px;
+margin-bottom: 300px;
+}
+
+.title {
+font-size: 20px;
+margin-bottom: 50px;
+color: rgb(0, 0, 0);
+}
+
+.inputContainer {
+position: relative;
+height: 45px;
+width: 150%;
+margin-bottom: 17px;
+}
+
+.inputContainer2 {
+position: relative;
+height: 50px;
+width: 150%;
+margin-bottom: 17px;
+text-align: start;
+margin-bottom: 50px;
+}
+
+/* Style the inputs */
+
+.input {
+position: relative;
+top: 0px;
+left: 0px;
+height: 100%;
+width: 100%;
+border: 1px solid #03FA6E;
+border-radius: 7px;
+font-size: 16px;
+padding: 0 20px;
+outline: none;
+background: none;
+z-index: 1;
+}
+
+.input2 {
+position: relative;
+top: 0px;
+left: 0px;
+height: 150%;
+width: 100%;
+border: 1px solid #03FA6E;
+border-radius: 7px;
+font-size: 16px;
+padding: 0 20px;
+outline: none;
+background: none;
+z-index: 1;
+}
+
+/* Hide the placeholder texts (a) */
+
+::placeholder {
+color: transparent;
+}
+
+/* Styling text labels */
+
+.label {
+position: absolute;
+top: 15px;
+left: 15px;
+padding: 0 4px;
+background-color: white;
+color: #bbbbbb;
+font-size: 16px;
+transition: 0.5s;
+z-index: 0;
+}
+
+.label2 {
+position: absolute;
+top: 15px;
+left: 15px;
+padding: 0 4px;
+background-color: white;
+color: #bbbbbb;
+font-size: 16px;
+transition: 0.5s;
+z-index: 0;
+}
+
+.submitBtn {
+display: block;
+margin-left: 0px;
+padding: 15px 30px;
+border: none;
+background-color: #000000;
+color: #03FA6E;
+border-radius: 6px;
+cursor: pointer;
+font-size: 16px;
+margin-top: 30px;
+}
+
+.submitBtn:hover {
+background-color: #03FA6E;
+transform: translateY(-2px);
+color: #000000;
+}
+
+.input:focus + .label {
+top: -7px;
+left: 3px;
+z-index: 10;
+font-size: 14px;
+font-weight: 600;
+color: #000000;
+}
+
+.input:focus {
+border: 2px solid #03FA6E;
+}
+
+.input:not(:placeholder-shown)+ .label {
+top: -7px;
+left: 3px;
+z-index: 10;
+font-size: 14px;
+font-weight: 600;
+}
+
+/*---Input2 / Label2---*/
+
+.input2:focus + .label2 {
+top: -7px;
+left: 3px;
+z-index: 10;
+font-size: 14px;
+font-weight: 600;
+color: #000000;
+}
+
+.input2:focus {
+border: 2px solid #03FA6E;
+}
+
+.input2:not(:placeholder-shown)+ .label2 {
+top: -7px;
+left: 3px;
+z-index: 10;
+font-size: 14px;
+font-weight: 600;
+}
+
+textarea.input2 {
+padding: 12px 20px;
+}
+
+
+
+/*---FOOTER---*/
+
+/* ==== GENERAL STYLES ==== */
+
+* {
+  box-sizing: border-box;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/*---FOOTER STYLE---*/
+
+footer {
+  background: #000 ;
+  display: table;
+  width: 100%;
+  height: 6rem;
+  text-align: center;
+  padding: 0rem;
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+  position: bottom;
+}
+
+.footer {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+footer small {
+  color: #fff;
+  letter-spacing: .025rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.footer-nav a {
+  color: #03FA6E;
+  text-decoration: none;
+  margin: 0 .5rem;
+  display: inline-block;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+  transition: color .15s ease-in-out;
+}
+
+html, body {
+  /* IE 10-11 didn't like using min-height */
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
+}
+.footer {
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  padding: 20px;
+}
+
+
+
+
+

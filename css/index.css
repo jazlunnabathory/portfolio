@@ -1,0 +1,291 @@
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #fff;
+  }
+  
+  a {
+    color: #03FA6E;
+  }
+  
+  /*---HEADER---*/
+  
+  .header {
+    background-color: #000;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    margin-top: 0px;
+    width: 100%;
+    z-index: 3;
+  }
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #000;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #ffffff;
+    text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #03FA6E;
+    color: #000;
+  }
+
+  .active {
+    background-color: #03FA6E;
+    color: #000;
+  }
+
+  .header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 10px;
+    text-decoration: none;
+  }
+
+  .logo {
+    height: 60px;
+    width: 225px;
+  }
+  
+  /*---MENU---*/
+  
+  .header .menu{
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    
+  }
+  
+  /*---THREE LINES MENU---*/
+  
+  .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .header .menu-icon .navicon {
+    background: #03FA6E;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+  
+  .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #03FA6E;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+
+
+
+  /*---THREE LINES DROPDOWN MENU*/
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  } 
+
+    /* 48em = 768px */
+  
+    @media (min-width: 48em) {
+        .header li {
+          float: left;
+        }
+        .header li a {
+          padding: 20px 30px;
+        }
+        .header .menu {
+          clear: none;
+          float: right;
+          max-height: none;
+        }
+        .header .menu-icon {
+          display: none;
+        }
+      }
+
+
+
+
+/*---ABOUT ME---*/
+
+#AboutMe{
+  width: auto;
+  height: auto;
+  border: 0px solid;
+  margin-bottom: 25px;
+  }
+  
+#myphoto {
+  height: 400px;
+  width: 300px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  margin-left: 200px;
+  margin-right: 30px;
+  padding: 0px 0px;
+  border-style: dotted;
+  overflow: hidden;
+  float: inline-start;
+  }
+  
+/* .aboutme1 {
+  color: #000;
+  margin-top: 80px;
+  margin-left: 0px;
+  padding: 10px 10px 10px 10px;
+  text-align: justify;
+  } */
+  
+.aboutme2 {
+  color: #000;
+  margin-top: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  /* padding: 10px 10px 0px 0px; */
+  text-align: justify;
+  font-size: 1.25em;
+  margin-bottom: 100px;
+  }
+
+
+
+
+/*---FOOTER---*/
+
+/* ==== GENERAL STYLES ==== */
+
+* {
+    box-sizing: border-box;
+  }
+  
+strong {
+    font-weight: 700;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /*---FOOTER STYLE---*/
+  
+footer {
+    background: #000 ;
+    display: table;
+    width: 100%;
+    height: 6rem;
+    text-align: center;
+    padding: 0rem;
+    font-family: Helvetica, sans-serif;
+    font-size: 1rem;
+    position: bottom;
+  }
+  
+.footer {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+footer small {
+    color: #fff;
+    letter-spacing: .025rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  
+.footer-nav a {
+    color: #03FA6E;
+    text-decoration: none;
+    margin: 0 .5rem;
+    display: inline-block;
+  }
+  
+.footer-nav a:hover {
+    color: #fff;
+    transition: color .15s ease-in-out;
+  }
+  
+  html, body {
+    /* IE 10-11 didn't like using min-height */
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  .content {
+    flex: 1 0 auto; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    padding: 20px;
+  }
+  .footer {
+    flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+    padding: 20px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
